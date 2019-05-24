@@ -16,22 +16,26 @@
       <label for="notaEstudiante">Nota:</label><br>
       <input type="text" name="notaEstudiante" id="notaEstudiante"><br>
       <br>
-      <button type="button" name="registrarEstudiante" id="registrarEstudiante">Registrar Estudiante</button>
-      <button type="button" name="mostrarPromedio" id="mostrarPromedio">Registrar Estudiante</button>
-      <button type="button" name="mostrarNotaMayor" id="mostrarNotaMayor">Registrar Estudiante</button>
-      <button type="button" name="mostrarNotaMenor" id="mostrarNotaMenor">Registrar Estudiante</button>
+      <div class="btn" id="registrarEstudiante">Registrar Estudiante</div>
     </div>
     <div id="listContainer">
-      <h1>Listado Estudianes </h1>
+      <h1>Listado Estudiantes </h1>
       <table border="2px">
         <thead>
             <th>Código</th>
             <th>Nombre</th>
             <th>Nota</th>
         </thead>
-        <tbody>
+        <tbody id="listEstudiantes">
 
         </tbody>
+      </table>
+      <div id="btn-container">
+        <div class="btn" id="mostrarPromedio">Mostrar Promedio</div>
+        <div class="btn" id="mostrarNotaMayor">Mostrar Nota Mayor</div>
+        <div class="btn" id="mostrarNotaMenor">Mostrar Nota Menor</div>
+      </div>
     </div>
   </body>
+  <script type="text/javascript" src="js/app.js"></script>
 </html>

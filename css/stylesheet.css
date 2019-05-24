@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css?family=Montaga&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+#formContainer,#listContainer{
+  background-color: #d2dbab;
+  margin: 0 auto;
+  padding-bottom: 3vh;
+  width: 80%;
+  text-align: center;
+  height: auto;
+}
+
+#formContainer h1{
+  background-color: #9fa582;
+  font-family: 'Montaga', serif;
+  text-align: center;
+  padding: 2vh;
+}
+
+label{
+  font-size: x-large;
+}
+
+input{
+  height: 45px;
+  margin-top: 1vh;
+  border: none;
+  border-radius: 10px 40px;
+  font-size: x-large;
+  text-align: center;
+}
+
+.btn{
+  font-size: x-large;
+  padding: 3vh;
+  margin: 3vh auto;
+  background-color: none !important;
+  border: double black;
+  width: 30%;
+}
+
+.btn:hover{
+  background-color: #b1b27c !important;
+}
+
+#listContainer h1{
+  background-color: #2b2b27;
+  color: #a7d1cf;
+  font-family: 'Montaga', serif;
+  text-align: center;
+  padding: 2vh;
+}
+
+table{
+  border-collapse: collapse;
+  width: 100%;
+  border: none;
+}
+
+th{
+  background-color: #2b2b27;
+  color: #a7d1cf;
+  height: 50px;
+  font-family: 'Montaga', serif;
+  font-size: x-large;
+  border: none;
+}
+
+tr{
+    border: none !important;
+}
+
+tr:hover{
+  background-color: #b2cc8c;
+}
+
+tr:nth-child(even){
+  background-color: #8c9184;
+}
+
+tr:nth-child(odd){
+  background-color: #dfe8d0;
+}
+
+td{
+  font-size: x-large;
+  height: 40px;
+  padding: 10px;
+  border-bottom: 4px solid #000;
+  border-left: none;
+  border-right: none;
+}
+
+#btn-container{
+  display: flex;
+}
