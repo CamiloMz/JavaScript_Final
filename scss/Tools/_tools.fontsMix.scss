@@ -1,0 +1,10 @@
+@mixin fontFace($fontName) {    
+  @font-face {
+    font-family: '#{$fontName}';
+    src: url('../fonts/#{$fontName}.eot'); //IE9 Compat Modes
+    src: url('../fonts/#{$fontName}.eot?#iefix') format('embedded-opentype'), //IE6-IE8
+         url('../fonts/#{$fontName}.woff2') format('woff2'), //Super Modern Browsers
+         url('../fonts/#{$fontName}.woff') format('woff'), //Pretty Modern Browsers
+         url('../fonts/#{$fontName}.ttf')  format('truetype'), //Safari, Android, iOS
+    }
+}

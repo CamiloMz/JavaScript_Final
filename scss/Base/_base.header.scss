@@ -1,0 +1,14 @@
+header{
+    align-items: center;
+    display: flex;
+    font-size: 18px;
+    height: 20vh;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+    transform-style: preserve-3d;
+    perspective: 10px;
+    animation: fade-slide-down 2s .5s cubic-bezier(0,.5,0,1) forwards;
+    opacity: 0;
+}

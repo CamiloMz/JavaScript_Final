@@ -1,0 +1,24 @@
+/*Fonts styles*/
+@include fontFace(Poppins-Black);
+@include fontFace(Poppins-BlackItalic);
+@include fontFace(Poppins-Bold);
+@include fontFace(Poppins-BoldItalic);
+@include fontFace(Poppins-ExtraBold);
+@include fontFace(Poppins-ExtraBoldItalic);
+@include fontFace(Poppins-ExtraLight);
+@include fontFace(Poppins-ExtraLightItalic);
+@include fontFace(Poppins-Italic);
+@include fontFace(Poppins-Light);
+@include fontFace(Poppins-LightItalic);
+@include fontFace(Poppins-Medium);
+@include fontFace(Poppins-MediumItalic);
+@include fontFace(Poppins-Regular);
+@include fontFace(Poppins-SemiBold);
+@include fontFace(Poppins-SemiBoldItalic);
+@include fontFace(Poppins-Thin);
+@include fontFace(Poppins-ThinItalic);
+
+h1{
+    font-size: $h1FontSize;
+}
+

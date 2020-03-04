@@ -1,0 +1,17 @@
+section.lflex--center--center.lflex--column
+    h1 REGISTRAR ESTUDIANTE
+    form
+        .lflex--row--lg
+            .form__group
+                input(type="text", name="code", id="code")
+                label(for="code") Código
+                small#error.error  
+            .form__group
+                input(type="text", name="name", id="name")
+                label(for="name") Nombre
+                small#error.error  
+            .form__group
+                input(type="text", name="note", id="note")
+                label(for="note") Nota
+                small#error.error  
+        button(type="button", id="btnRegister") REGISTRAR

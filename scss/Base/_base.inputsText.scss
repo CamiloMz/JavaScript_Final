@@ -1,0 +1,60 @@
+input[type=text]{
+    box-sizing: border-box;
+    display: block;
+    background-color: transparent;
+    border: 2px solid #fff;
+    @include box-shadow-inset-main;
+    height: 4rem;
+    width: 100%;
+    border-radius: 3rem;
+    padding: 0 2rem;
+    outline: none;    
+    position: relative;
+    top: 30px;
+    color: $color-main;
+}
+
+
+input[type=text] + label{
+    position: absolute;
+    top: 35px;
+    left: 2rem;
+    color: #99b1d6;
+    transition: all .5s ease-out;
+}
+
+.slideUp{    
+    animation: slideUp .5s ease-out;
+    animation-fill-mode: forwards;
+}
+
+.error{
+    position: relative;
+    top: 25px; 
+    color: red;
+    text-align: center;
+    font-size: 14px;
+}
+
+@keyframes slideUp{
+    100%{
+        top: 0;
+        color: $color-main;
+    }
+}
+
+.slideDown{    
+    animation: slideDown .5s ease-out;
+    animation-fill-mode: forwards;
+}
+
+@keyframes slideDown{
+    from{
+        top: 0;
+        color: $color-main;
+    }
+    to{
+        top: 35px;
+        color: #99b1d6;
+    }
+}

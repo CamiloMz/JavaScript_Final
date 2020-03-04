@@ -1,4 +1,48 @@
+var inputs = document.querySelectorAll('div.form__group input[type="text"]');
+
+const inputMethods = {  
+  inputAddListeners : function (){
+    inputs.forEach(input => {
+      input.addEventListener('click', () => {
+        let label = input.nextElementSibling;
+        label.className = 'slideUp';
+      });    
+      input.addEventListener('blur', () => {
+        if(input.value == ""){
+          let label = input.nextElementSibling;
+          label.classList.add('slideDown');
+        }
+      });
+    });
+  }
+}
+
+const register = {
+  init: function(){
+    document.getElementById('btnRegister').addEventListener('click',this.validarCampos);
+  },
+  validarCampos: function(){
+    inputs.forEach(input => {
+      let error = input.nextElementSibling.nextElementSibling;
+      if(input.value == ""){        
+        error.innerHTML = `Este Campo no puede estar vacio`        
+      }else{
+        error.innerHTML = '';
+      }
+      input.addEventListener('focus', () => {
+        error.innerHTML = '';
+      });  
+
+    });
+  }
+}
+
 window.onload = function(){
+  inputMethods.inputAddListeners();
+  register.init();
+};
+
+/*window.onload = function(){
   document.getElementById('registrarEstudiante').addEventListener('click',validarCampos);
   document.getElementById('mostrarPromedio').addEventListener('click',mostrarPromedio);
   document.getElementById('mostrarNotaMayor').addEventListener('click',mostrarNotaMayor);
@@ -86,4 +130,4 @@ function mostrarNotaMenor(){
   }else{
     alert('No hay estudiantes registrados');
   }
-}
+}*/

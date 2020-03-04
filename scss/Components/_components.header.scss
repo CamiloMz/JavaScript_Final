@@ -1,0 +1,15 @@
+.header__logo{
+    width: 30%;
+    min-width: 65px;
+}
+
+@keyframes fade-slide-down{
+    0% {
+        opacity: 0;
+        transform: translateY(-4rem);
+    }
+    100% {
+        opacity: 1;
+        transform: none;
+    }
+}

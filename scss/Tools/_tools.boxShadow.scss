@@ -1,0 +1,11 @@
+@mixin box-shadow-inset-main{
+    box-shadow: 4px 4px 2px #557EBC inset, -4px -4px 2px #fff inset;
+}
+
+@mixin box-shadow-inset-btn{
+    box-shadow: 4px 4px 2px #fff inset, -4px -4px 2px #557EBC inset;
+}
+
+@mixin box-shadow-inset-btn-hover{
+    box-shadow: 6px 6px 2px #fff inset, -6px -6px 2px #557EBC inset;
+}

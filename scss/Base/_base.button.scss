@@ -1,0 +1,20 @@
+button[type=button]{
+    width: 100%;
+    background-color: transparent;
+    border: none;
+    @include box-shadow-inset-btn;
+    height: 4rem;
+    border-radius: 3rem;
+    margin: 1rem 0;
+    color: #afafaf;
+    transition: box-shadow .5s ease-out;
+
+    &:hover{
+        @include box-shadow-inset-btn-hover;
+    }
+
+    &:active{
+        @include box-shadow-inset-main;
+        border: 2px solid #fff;
+    }
+}
