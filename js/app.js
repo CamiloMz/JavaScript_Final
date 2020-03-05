@@ -14,27 +14,57 @@ const inputMethods = {
         }
       });
     });
+  },
+  clearForm : function (){
+    inputs.forEach(input => {
+      input.value = "";
+    });
+    console.log(register.students);
   }
+
 }
 
 const register = {
   init: function(){
-    document.getElementById('btnRegister').addEventListener('click',this.validarCampos);
+    document.getElementById('btnRegister').addEventListener('click',register.validarCampos);
   },
+  students : [],
   validarCampos: function(){
+    let isValid = false;
     inputs.forEach(input => {
       let error = input.nextElementSibling.nextElementSibling;
       if(input.value == ""){        
-        error.innerHTML = `Este Campo no puede estar vacio`        
+        error.innerHTML = `Este Campo no puede estar vacio`
+        isValid = false;        
       }else{
-        error.innerHTML = '';
+        isValid = true; 
       }
       input.addEventListener('focus', () => {
         error.innerHTML = '';
       });  
-
     });
-  }
+    if(isValid){
+      register.addStudent();
+    }
+  },
+  addStudent : function(){
+    var student = {
+      Code : inputs[0].value,
+      Name : inputs[1].value,
+      Note : inputs[2].value
+    };
+    register.students.push(student);
+    this.printStudent(student);
+    inputMethods.clearForm();
+  },
+  printStudent : function(student){
+    let studentCard = `<p> 
+                          Codigo : ${student.Code},
+                          Nombre : ${student.Name},
+                          Nota : ${student.Note}
+                      </p>`
+    console.log(studentCard);
+  }  
 }
 
 window.onload = function(){
